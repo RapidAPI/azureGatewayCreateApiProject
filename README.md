@@ -11,9 +11,9 @@ Create a .env file and set the following values
 
 
 Rapid REST PAPI Values:\
-REST_HOST='{your-rest-platform-api-host}'/
-REST_URL='{your-rest-platform-api-url}'/
-REST_KEY='{your-rest-platform-api-key}'/
+REST_HOST='{your-rest-platform-api-host}'\
+REST_URL='{your-rest-platform-api-url}'\
+REST_KEY='{your-rest-platform-api-key}'\
 OWNER_ID='{the-id-of-the-api-owner}'
 
 AZURE GATEWAY API Values:\
