@@ -14,7 +14,7 @@ Rapid REST PAPI Values:\
 REST_HOST=''\
 REST_URL='{{your-rest_papi-api}}/v1/apis/rapidapi-file/admin'\
 REST_KEY=''\
-OWNER_ID=''\
+OWNER_ID=''
 
 AZURE GATEWAY API Values:\
 AZURE_SERVICE_GATEWAY=''\
@@ -23,4 +23,4 @@ AZURE_PROVIDER_NAME='Microsoft.ApiManagement'\
 AZURE_API_VERSION='2021-12-01-preview'\
 AZURE_SUBSCRIPTION=''\
 AZURE_SHARED_ACCESS_KEY=''\
-AZURE_OAUTH2_SERVICE=''\
+AZURE_OAUTH2_SERVICE=''
