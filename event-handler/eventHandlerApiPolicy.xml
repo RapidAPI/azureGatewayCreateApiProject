@@ -1,0 +1,54 @@
+<policies>
+    <inbound>
+        <base />
+        <set-variable value="@(context.Request.Headers["Aeg-Event-Type"].Contains("SubscriptionValidation"))" name="isEventGridSubscriptionValidation" />
+        <set-variable value="@(context.Request.Headers["Aeg-Event-Type"].Contains("Notification"))" name="isEventGridNotification" />
+        <choose>
+            <when condition="@(context.Variables.GetValueOrDefault<bool>("isEventGridSubscriptionValidation"))">
+                <return-response>
+                    <set-status code="200" reason="OK" />
+                    <set-body>@{
+                          var events = context.Request.Body.As<string>(); 
+                          JArray a = JArray.Parse(events);
+                          var eventGridData = a.First["data"];
+                          var validationCode = eventGridData["validationCode"];
+                          var jOutput =
+                             new JObject(
+                                new JProperty("validationResponse", validationCode)
+                             );
+                        return jOutput.ToString();
+                    }</set-body>
+                </return-response>
+            </when>
+            <when condition="@(context.Variables.GetValueOrDefault<bool>("isEventGridNotification"))">
+                <send-one-way-request mode="new">
+                    <set-url>https://create-api-project.azurewebsites.net/api/create-api-project</set-url>
+                    <set-method>POST</set-method>
+                    <set-body>@{
+                        JArray eventArray = JArray.Parse(context.Request.Body.As<string>());
+                          var subject = eventArray.First["subject"];
+                          var eventType = eventArray.First["eventType"];
+                          var jOutput =
+                             new JObject(
+                                new JProperty("subject", subject),
+                                new JProperty("eventType", eventType)
+                             );
+                        return jOutput.ToString(); 
+                    }</set-body>
+                </send-one-way-request>
+                <return-response>
+                    <set-status code="200" reason="OK" />
+                </return-response>
+            </when>
+        </choose>
+    </inbound>
+    <backend>
+        <base />
+    </backend>
+    <outbound>
+        <base />
+    </outbound>
+    <on-error>
+        <base />
+    </on-error>
+</policies>
