@@ -4,7 +4,7 @@ Demo Days code for creating an API Project in RapidAPI when an API is created on
 For addition deatails on this setup, please reach out to James De Luca for Azure Gaateway configuration and Code logic.
 
 ##Notion Documentaiton Link 
-https://www.notion.so/rapidapi/
+https://www.notion.so/rapidapi/Azure-API-Project-Creation-882b8a7dc38b4701a394faeb44c61f6b
 
 
 Create a .env file and set the following values
