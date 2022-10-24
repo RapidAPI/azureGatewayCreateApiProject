@@ -22,7 +22,7 @@
             </when>
             <when condition="@(context.Variables.GetValueOrDefault<bool>("isEventGridNotification"))">
                 <send-one-way-request mode="new">
-                    <set-url>https://create-api-project.azurewebsites.net/api/create-api-project</set-url>
+                    <set-url>the url of your API to handle events</set-url>
                     <set-method>POST</set-method>
                     <set-body>@{
                         JArray eventArray = JArray.Parse(context.Request.Body.As<string>());
