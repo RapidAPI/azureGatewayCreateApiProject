@@ -10,13 +10,13 @@ https://www.notion.so/rapidapi/
 Create a .env file and set the following values
 
 
-Rapid REST PAPI Values\
+Rapid REST PAPI Values:\
 REST_HOST=''\
 REST_URL='{{your-rest_papi-api}}/v1/apis/rapidapi-file/admin'\
 REST_KEY=''\
 OWNER_ID=''\
 
-AZURE GATEWAY API Values\
+AZURE GATEWAY API Values:\
 AZURE_SERVICE_GATEWAY=''\
 AZURE_RESOURCE_GROUP=''\
 AZURE_PROVIDER_NAME='Microsoft.ApiManagement'\
