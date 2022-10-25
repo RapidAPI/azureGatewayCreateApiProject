@@ -17,10 +17,9 @@ REST_KEY='{your-rest-platform-api-key}'\
 OWNER_ID='{the-id-of-the-api-owner}'
 
 AZURE GATEWAY API Values:\
-AZURE_SERVICE_GATEWAY=''\
-AZURE_RESOURCE_GROUP=''\
+AZURE_SERVICE_GATEWAY='your-azure-api-gateway-name'\
+AZURE_RESOURCE_GROUP='your-resource-group'\
 AZURE_PROVIDER_NAME='Microsoft.ApiManagement'\
 AZURE_API_VERSION='2021-12-01-preview'\
-AZURE_SUBSCRIPTION=''\
-AZURE_SHARED_ACCESS_KEY=''\
-AZURE_OAUTH2_SERVICE=''
+AZURE_SUBSCRIPTION='your 36-digit-azure subscription'\
+AZURE_SHARED_ACCESS_KEY='your-shared-access-key-from-apim-service'
