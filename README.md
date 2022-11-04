@@ -6,7 +6,7 @@ For addition deatails on this setup, please reach out to James De Luca for Azure
 ##Notion Documentaiton Link 
 https://www.notion.so/rapidapi/Azure-API-Project-Creation-882b8a7dc38b4701a394faeb44c61f6b
 
-Install the dotnev npm using the command in VS Code terminal "npm i dotenv"
+Install the dotnev npm using the command in VS Code terminal "npm i dotenv"\
 Create a .env file and set the following values
 
 
